@@ -8,6 +8,11 @@
 ![Quarkus](https://img.shields.io/badge/Quarkus-3.x-red)
 ![Status](https://img.shields.io/badge/status-stable-brightgreen)
 
+# Project moved to Quarkiverse
+
+Official repository:
+https://github.com/quarkiverse/quarkus-multitenancy
+
 > A modular, decoupled multi-tenancy framework for Quarkus 
 > supporting HTTP, ORM, and future extensions.
 
