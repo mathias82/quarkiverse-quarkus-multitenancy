@@ -59,7 +59,7 @@ quarkus.oidc.customer.auth-server-url=https://customer.example.com
 
 A startup check fails fast if `jwt` is enabled with no verification source. Applications that produce their own `JsonWebToken` outside of SmallRye/OIDC can opt out with `quarkus.multi-tenant.http.jwt.skip-startup-check=true`.
 
-When `jwt` is active only because of the implicit default chain (you never set `quarkus.multi-tenant.http.strategy`), the extension now logs a startup warning. This is step 1 of the deprecation cycle that will move the default chain to `header,cookie` (issue [#15](https://github.com/quarkiverse/quarkus-multitenancy/issues/15)); it is informational and changes no behaviour.
+The default HTTP strategy chain has been changed to `header,cookie`, making `jwt` opt-in. If you explicitly enable `jwt` in `quarkus.multi-tenant.http.strategy` you must configure a verified token source (SmallRye JWT or Quarkus OIDC) or set `quarkus.multi-tenant.http.jwt.skip-startup-check=true` when providing `JsonWebToken` via a custom producer.
 
 ### Path-based resolution
 
